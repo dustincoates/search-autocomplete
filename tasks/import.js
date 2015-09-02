@@ -30,7 +30,7 @@ var finish = function(err){
 };
 
 index.setSettings({
-  attributesToIndex: ['name', 'categories', 'brand', 'type', 'unordered(description)'],
+  attributesToIndex: ['unordered(name)', 'categories', 'brand', 'type', 'unordered(description)'],
   customRanking: ['desc(popularity)', 'asc(price)'],
   separatorsToIndex: '\'&', // (E.g. 4' Lightning Charge, AT&T)
   synonyms: [
