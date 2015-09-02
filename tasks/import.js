@@ -21,7 +21,7 @@ var algoliasearch = require('algoliasearch');
 var client        = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_ADMIN_KEY);
 var index         = client.initIndex('bestBuyProducts');
 
-var close = function(err){
+var finish = function(err){
   if(err){
     throw err;
   }
@@ -32,7 +32,7 @@ var close = function(err){
 index.setSettings({
   attributesToIndex: ['name', 'categories', 'brand', 'type', 'unordered(description)'],
   customRanking: ['desc(popularity)', 'asc(price)'],
-  separatorsToIndex: "'&", // (E.g. 4' Lightning Charge, AT&T)
+  separatorsToIndex: '\'&', // (E.g. 4' Lightning Charge, AT&T)
   synonyms: [
     ['apple', 'mac'],
     ['hp', 'hewlett packard'],
@@ -40,4 +40,4 @@ index.setSettings({
   ]
 });
 
-async.each(chunkedData, index.saveObjects.bind(index), close);
+async.each(chunkedData, index.saveObjects.bind(index), finish);
