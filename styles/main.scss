@@ -1,0 +1,139 @@
+$default-font-family: 'Raleway', sans-serif;
+$black: black;
+$white: white;
+$near-white: #ecf0f1;
+$light-gray: #bdc3c7;
+$mid-gray: #95a5a6;
+$light-green: #2ecc71;
+$dark-blue: #34495e;
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $default-font-family;
+}
+
+input {
+  background: $white;
+  border: 0;
+  border-bottom: 3px solid $mid-gray;
+  color: $dark-blue;
+  font-family: $default-font-family;
+  font-size: 2rem;
+  outline: none;
+  width: 100%;
+  padding: .8rem .5rem;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  -o-transition: .5s all ease;
+  transition: .5s all ease;
+  &:focus {
+    border-bottom-color: $light-green;
+  }
+}
+
+.twitter-typeahead {
+  width: 100%;
+
+  .tt-menu {
+    overflow: auto;
+    width: 100%;
+    .tt-dataset {
+      background: $white;
+      width: 100%;
+    }
+  }
+
+
+  .category {
+    background: $near-white;
+    border-bottom: 1px solid $light-gray;
+    color: $dark-blue;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+    padding: .8rem .5rem;
+  }
+
+  a.tt-selectable {
+    color: $dark-blue;
+    display: block;
+    padding: 1.7rem .6rem .6rem .5rem;
+    text-decoration: none;
+
+    &:not(:last-of-type){
+      border-bottom: 1px solid $dark-blue;
+    }
+
+    &.tt-cursor {
+      padding-right: .4rem;
+      border-right: .2rem solid $light-green;
+    }
+
+    .product-image {
+      display: inline-block;
+      float: left;
+      height: 110px;
+      width: 110px;
+      margin-right: 20px;
+
+      img {
+        display: block;
+        max-height: 110px;
+        max-width: 110px;
+        margin: 0 auto;
+      }
+    }
+
+    .results {
+      overflow: hidden; // Triggers block formatting context
+    }
+
+    .result-section {
+      display: block;
+      margin-bottom: .3rem;
+
+      em {
+        font-style: italic;
+        margin-right: .1rem; // To keep italics from colliding with other text
+      }
+
+      &.name {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      &.details {
+        margin-bottom: .6rem;
+
+        .price {
+          color: $light-green;
+        }
+      }
+
+      &.description {
+        font-size: .8rem;
+        line-height: 1.3;
+      }
+    }
+  }
+
+}
+
+.direction {
+  font-family: $default-font-family;
+  font-weight: 200;
+  width: 50%;
+  margin: 10rem auto 0;
+  line-height: 1.2;
+  font-size: 2.6rem;
+  color: $mid-gray;
+}

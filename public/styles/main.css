@@ -1,0 +1,92 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+input {
+  background: white;
+  border: 0;
+  border-bottom: 3px solid #95a5a6;
+  color: #34495e;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  outline: none;
+  width: 100%;
+  padding: .8rem .5rem;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  -o-transition: .5s all ease;
+  transition: .5s all ease; }
+  input:focus {
+    border-bottom-color: #2ecc71; }
+
+.twitter-typeahead {
+  width: 100%; }
+  .twitter-typeahead .tt-menu {
+    overflow: auto;
+    width: 100%; }
+    .twitter-typeahead .tt-menu .tt-dataset {
+      background: white;
+      width: 100%; }
+  .twitter-typeahead .category {
+    background: #ecf0f1;
+    border-bottom: 1px solid #bdc3c7;
+    color: #34495e;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+    padding: .8rem .5rem; }
+  .twitter-typeahead a.tt-selectable {
+    color: #34495e;
+    display: block;
+    padding: 1.7rem .6rem .6rem .5rem;
+    text-decoration: none; }
+    .twitter-typeahead a.tt-selectable:not(:last-of-type) {
+      border-bottom: 1px solid #34495e; }
+    .twitter-typeahead a.tt-selectable.tt-cursor {
+      padding-right: .4rem;
+      border-right: 0.2rem solid #2ecc71; }
+    .twitter-typeahead a.tt-selectable .product-image {
+      display: inline-block;
+      float: left;
+      height: 110px;
+      width: 110px;
+      margin-right: 20px; }
+      .twitter-typeahead a.tt-selectable .product-image img {
+        display: block;
+        max-height: 110px;
+        max-width: 110px;
+        margin: 0 auto; }
+    .twitter-typeahead a.tt-selectable .results {
+      overflow: hidden; }
+    .twitter-typeahead a.tt-selectable .result-section {
+      display: block;
+      margin-bottom: .3rem; }
+      .twitter-typeahead a.tt-selectable .result-section em {
+        font-style: italic;
+        margin-right: .1rem; }
+      .twitter-typeahead a.tt-selectable .result-section.name {
+        font-size: 1.6rem;
+        font-weight: 600; }
+      .twitter-typeahead a.tt-selectable .result-section.details {
+        margin-bottom: .6rem; }
+        .twitter-typeahead a.tt-selectable .result-section.details .price {
+          color: #2ecc71; }
+      .twitter-typeahead a.tt-selectable .result-section.description {
+        font-size: .8rem;
+        line-height: 1.3; }
+
+.direction {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  width: 50%;
+  margin: 10rem auto 0;
+  line-height: 1.2;
+  font-size: 2.6rem;
+  color: #95a5a6; }
