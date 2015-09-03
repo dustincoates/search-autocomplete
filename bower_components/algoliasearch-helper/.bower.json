@@ -1,0 +1,39 @@
+{
+  "name": "algoliasearch-helper",
+  "version": "2.2.0",
+  "homepage": "https://github.com/algolia/algoliasearch-helper-js",
+  "authors": [
+    "Algolia Team <support@algolia.com>"
+  ],
+  "description": "Helper for implementing advanced search features with algolia",
+  "main": "dist/algoliasearch.helper.js",
+  "keywords": [
+    "js",
+    "algolia",
+    "search",
+    "helper",
+    "facets",
+    "api",
+    "rest"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "examples",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "algoliasearch": "3.x"
+  },
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.2.0",
+    "commit": "c73bf00e7e00790750b2b4cb3a584698683f3151"
+  },
+  "_source": "git://github.com/algolia/algoliasearch-helper-js.git",
+  "_target": "~2.2.0",
+  "_originalSource": "algoliasearch-helper",
+  "_direct": true
+}

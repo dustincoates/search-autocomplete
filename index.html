@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Algolia eCommerce Search</title>
+  <meta name="description" content="Search eCommerce products with autocomplete.">
+  <style>
+    .tt-menu { display: block !important; }
+  </style>
+</head>
+<body>
+  <input type="text" class="typeahead" id="product-search" placeholder="Search for products by name, description, or manufacturer." data-min-length="0">
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/typeahead.js/dist/typeahead.jquery.js"></script>
+  <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+
+  <script type="text/javascript" src="bower_components/algoliasearch/dist/algoliasearch.js"></script>
+  <script type="text/javascript" src="bower_components/algoliasearch-helper/dist/algoliasearch.helper.js"></script>
+
+  <script type="text/javascript" src="lib/search_autocomplete.js"></script>
+
+  <script type="text/x-handlebars-template" id="product-template">
+    <div class="product">
+      <a href="{{{ url }}}">
+        <img src="{{{ image }}}" alt="{{{ name }}}">
+        <span class="name">{{{ _highlightResult.name.value }}} <small>({{{ price }}})</small></span>
+        <span class="team">{{{ _highlightResult.brand.value }}}</span>
+      </a>
+    </div>
+  </script>
+</body>
+</html>
