@@ -7,6 +7,7 @@ $mid-gray: #95a5a6;
 $light-green: #2ecc71;
 $dark-blue: #34495e;
 $breakpoint-mobile: 680px;
+$breakpoint-landscape-height: 400px;
 
 .clearfix:after {
   content: "";
@@ -161,4 +162,14 @@ input {
   line-height: 1.2;
   margin: 10rem auto 0;
   width: 50%;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  @media only screen and (max-device-height: $breakpoint-landscape-height) {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+  }
 }
