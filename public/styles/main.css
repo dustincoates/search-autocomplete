@@ -111,7 +111,7 @@ input {
   line-height: 1.2;
   margin: 10rem auto 0;
   width: 50%; }
-  @media only screen and (max-width: 680px) {
+  @media only screen and (max-width: 720px) {
     .direction {
       font-size: 1.5rem;
       margin-top: 5rem; } }
