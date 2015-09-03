@@ -25,13 +25,29 @@ module.exports = function(grunt){
           'public/styles/reset.css': 'styles/reset.scss'
         }
       }
+    },
+
+    uglify: {
+      assemble: {
+        files: {
+          'public/scripts/minified.js': [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/typeahead.js/dist/typeahead.jquery.js',
+            'bower_components/handlebars/handlebars.js',
+            'bower_components/algoliasearch/dist/algoliasearch.js',
+            'bower_components/algoliasearch-helper/dist/algoliasearch.helper.js',
+            'lib/search_autocomplete.js'
+          ]
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('assemble', ['sass']);
-  grunt.registerTask('default', ['jshint', 'sass']);
+  grunt.registerTask('assemble', ['sass', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'sass', 'uglify']);
 };
