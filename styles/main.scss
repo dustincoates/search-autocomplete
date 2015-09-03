@@ -6,6 +6,7 @@ $light-gray: #bdc3c7;
 $mid-gray: #95a5a6;
 $light-green: #2ecc71;
 $dark-blue: #34495e;
+$breakpoint-mobile: 680px;
 
 .clearfix:after {
   content: "";
@@ -15,6 +16,13 @@ $dark-blue: #34495e;
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  @media only screen and (max-device-width: $breakpoint-mobile){
+    font-size: 32px;
+  }
 }
 
 body {
@@ -76,19 +84,23 @@ input {
     &.tt-cursor {
       padding-right: .4rem;
       border-right: .2rem solid $light-green;
+      @media only screen and (max-device-width: $breakpoint-mobile){
+        padding-right: .6rem;
+        border-right: none;
+      }
     }
 
     .product-image {
       display: inline-block;
       float: left;
-      height: 110px;
-      width: 110px;
-      margin-right: 20px;
+      height: 6.8rem;
+      width: 6.8rem;
+      margin-right: 1.25rem;
 
       img {
         display: block;
-        max-height: 110px;
-        max-width: 110px;
+        max-height: 6.8rem;
+        max-width: 6.8rem;
         margin: 0 auto;
       }
     }
@@ -99,7 +111,7 @@ input {
 
     .result-section {
       display: block;
-      margin-bottom: .3rem;
+      margin-bottom: .5rem;
 
       em {
         font-style: italic;
@@ -109,19 +121,32 @@ input {
       &.name {
         font-size: 1.6rem;
         font-weight: 600;
+
+        @media only screen and (max-device-width: $breakpoint-mobile){
+          font-size: 1.2rem;
+          margin-bottom: .5rem;
+        }
       }
 
       &.details {
-        margin-bottom: .6rem;
+        margin-bottom: .8rem;
 
         .price {
           color: $light-green;
+        }
+
+        @media only screen and (max-device-width: $breakpoint-mobile){
+          font-size: .4rem;
+          margin-bottom: 1rem;
         }
       }
 
       &.description {
         font-size: .8rem;
         line-height: 1.3;
+        @media only screen and (max-device-width: $breakpoint-mobile){
+          font-size: .35rem;
+        }
       }
     }
   }
@@ -129,11 +154,11 @@ input {
 }
 
 .direction {
-  font-family: $default-font-family;
-  font-weight: 200;
-  width: 50%;
-  margin: 10rem auto 0;
-  line-height: 1.2;
-  font-size: 2.6rem;
   color: $mid-gray;
+  font-family: $default-font-family;
+  font-size: 2.6rem;
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 10rem auto 0;
+  width: 50%;
 }
