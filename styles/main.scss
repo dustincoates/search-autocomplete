@@ -133,6 +133,10 @@ input {
       &.details {
         margin-bottom: .8rem;
 
+        .brand {
+          margin-right: .2rem;
+        }
+
         .price {
           color: $light-green;
         }

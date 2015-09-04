@@ -90,6 +90,8 @@ input {
             margin-bottom: .5rem; } }
       .twitter-typeahead a.tt-selectable .result-section.details {
         margin-bottom: .8rem; }
+        .twitter-typeahead a.tt-selectable .result-section.details .brand {
+          margin-right: .2rem; }
         .twitter-typeahead a.tt-selectable .result-section.details .price {
           color: #2ecc71; }
         @media only screen and (max-device-width: 680px) {
