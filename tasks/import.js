@@ -6,8 +6,8 @@ try {
   console.log('Reading variables from environment.\nIf in dev, use dotenv.');
 }
 
-if(!process.env.ALGOLIA_APP_ID || !process.env.ALGOLIA_APP_ID){
-  console.warn('Must have ALGOLIA_APP_ID and ALGOLIA_APP_ID env variables!');
+if(!process.env.ALGOLIA_APP_ID || !process.env.ALGOLIA_ADMIN_KEY){
+  console.warn('Must have ALGOLIA_APP_ID and ALGOLIA_ADMIN_KEY env variables!');
   process.exit();
 }
 
